@@ -42,4 +42,5 @@ public class Packet {
     @Override
     public String toString() {
         return encode(); // Display as JSON - we can use this to debug the code
+    }
 }
