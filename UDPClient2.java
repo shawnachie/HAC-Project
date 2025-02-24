@@ -26,7 +26,7 @@ public class UDPClient2
         client.sendPackets();
     }
     
-    //comment for now since we dont have IP yet 
+    //comment for now since we dont have IP yet and i got errors
     /*public UDPClient2() {
         try {
             socket = new DatagramSocket();
@@ -66,7 +66,7 @@ public class UDPClient2
                 Packet packet = createPacket(status); // Create a packet with status and file list
 
                 // Send the packet as a JSON string
-                DatagramPacket sendPacket = new DatagramPacket(packet.encode().getBytes(), packet.encode().length(), IPAddress, serverPort);
+                DatagramPacket sendPacket = new DatagramPacket(packet.encode().getBytes(), packet.encode().length(),/*  IPAddress,*/ serverPort);
                 socket.send(sendPacket);
 
                 System.out.println("Sent packet: " + packet); // Print the sent packet for debugging
