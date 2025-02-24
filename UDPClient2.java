@@ -1,89 +1,83 @@
 import java.io.IOException;
 import java.net.*;
 import java.util.Scanner;
+import java.io.File;
+import java.security.SecureRandom;
+import java.util.List;
+import java.util.Arrays;
+import java.util.concurrent.TimeUnit;
+
 /**
- * 
  * @author cjaiswal
- *
- *  
- * 
  */
 public class UDPClient2 
 {
+    //allows us to utilize secure random when designating IDs to our nodes
+    private SecureRandom secureRandom = new SecureRandom();
+    private int nodeId = secureRandom.nextInt(777);
+
+    //private InetAddress IPAddress = 000.0.0.0; //hardcode this in later
+    private int serverPort = 0000; //hardcode this in later
+
     private DatagramSocket socket;
-    private Scanner in = new Scanner(System.in);
-    public UDPClient2() 
-    {
-    	//create a client socket with random port number chose by DatagramSocket
-    	try 
-    	{
-			socket = new DatagramSocket();
-		} 
-    	catch (SocketException e) 
-    	{
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-    }
 
-    public void createAndListenSocket() 
-    {
-        try 
-        {
-            char ch='y';
-            
-            //create socket for the destination/server
-            InetAddress IPAddress = InetAddress.getByName("localhost");
-            int serverPort = 9876;
-            byte[] incomingData = new byte[1024];
-            String sentence = "";
-        	byte data[] = new byte[1024];
-
-            do
-            {
-            	//construct the client packet & send it
-            	System.out.println("Enter your message:");
-            	sentence = in.nextLine();
-            	data = sentence.getBytes();
-                DatagramPacket sendPacket = new DatagramPacket(data, data.length, IPAddress, serverPort);
-                socket.send(sendPacket);
-               
-                //create packet and recieve the response from the server
-                DatagramPacket incomingPacket = new DatagramPacket(incomingData, incomingData.length);
-                socket.receive(incomingPacket);
-                String response = new String(incomingPacket.getData());
-                System.out.println("Response from server:" + response);
-                System.out.println("Server Details:PORT " + incomingPacket.getPort()
-                + ", IP Address: " + incomingPacket.getAddress());
-                sendPacket = null; incomingPacket = null;
-                System.out.println("Chat more? Y/N...");
-                ch = in.nextLine().charAt(0);
-            }while(ch=='y' || ch=='Y');
-            
-            //send THEEND message to server to terminate
-            sentence = "THEEND";
-            data = sentence.getBytes();
-            DatagramPacket sendPacket = new DatagramPacket(data, data.length, IPAddress, 9876);
-            socket.send(sendPacket);
-            socket.close();
-        }
-        catch (UnknownHostException e) 
-        {
-            e.printStackTrace();
-        } 
-        catch (SocketException e) 
-        {
-            e.printStackTrace();
-        } 
-        catch (IOException e) 
-        {
-            e.printStackTrace();
-        }
-    }
-
-    public static void main(String[] args) 
-    {
+    public static void main(String[] args) {
         UDPClient2 client = new UDPClient2();
-        client.createAndListenSocket();
+        client.sendPackets();
     }
+    
+    //comment for now since we dont have IP yet and i got errors
+    /*public UDPClient2() {
+        try {
+            socket = new DatagramSocket();
+            IPAddress = InetAddress.getByName(IPAddress); // replace with the actual server IP
+        } catch (SocketException | UnknownHostException e) {
+            e.printStackTrace();
+        }
+    } */
+
+    //sets the file path to stary from the "home" directory 
+    private String fileListing = new File("home").getAbsolutePath();
+
+    // Method to retrieve the list of files from the home directory
+    private List<String> getFileNames() 
+    {
+        File directory = new File(fileListing);
+        if (!directory.exists() || !directory.isDirectory()) {
+            System.err.println("Directory does not exist: " + fileListing);
+            return List.of();
+        }
+
+        String[] files = directory.list((dir, name) -> new File(dir, name).isFile());
+        return (files != null) ? Arrays.asList(files) : List.of();
+    }
+
+    // Method to create a Packet
+    private Packet createPacket(String status) {
+        List<String> fileList = getFileNames();
+        return new Packet("UPDATE", String.valueOf(nodeId), status, fileList);
+    }
+
+    // Method to send the packet at random intervals
+    private void sendPackets() {
+        try {
+            while (true) {
+                String status = "ALIVE";
+                Packet packet = createPacket(status); // Create a packet with status and file list
+
+                // Send the packet as a JSON string
+                DatagramPacket sendPacket = new DatagramPacket(packet.encode().getBytes(), packet.encode().length(),/*  IPAddress,*/ serverPort);
+                socket.send(sendPacket);
+
+                System.out.println("Sent packet: " + packet); // Print the sent packet for debugging
+
+                // Random delay between 1-30 seconds
+                long delay = secureRandom.nextInt(30) + 1; // Random delay between 1 and 30 seconds
+                TimeUnit.SECONDS.sleep(delay);
+            }
+        } catch (IOException | InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
 }
