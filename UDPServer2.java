@@ -1,86 +1,225 @@
-
 import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
 import java.net.SocketException;
-/**
- * 
- * @author cjaiswal
- *
- *  
- * 
- */
+import java.util.ArrayList;
+import java.util.List;
+
 public class UDPServer2
 {
-    private DatagramSocket socket = null;
+    private DatagramSocket datagramSocket;
+    // buffer to store data received by client
+    private byte[] buffer = new byte[1024];
+    // List to store client data
+    private List<ClientData> clientDataList;
 
-    public UDPServer2() 
+    // constructor to initialize the datagram socket and list
+    public UDPServer2(DatagramSocket datagramSocket)
     {
-    	try 
-    	{
-    		//create the socket assuming the server is listening on port 9876
-			socket = new DatagramSocket(9876);
-		} 
-    	catch (SocketException e) 
-    	{
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
+        this.datagramSocket = datagramSocket;
+        this.clientDataList = new ArrayList<>();
     }
-    public void createAndListenSocket() 
-    {
-        try 
-        {
-        	//incoming data buffer
-            byte[] incomingData = new byte[1024];
 
-            while (true) 
-            {
-            	//create incoming packet
-                DatagramPacket incomingPacket = new DatagramPacket(incomingData, incomingData.length);
-                System.out.println("Waiting...");
-                
-                //wait for the packet to arrive and store it in incoming packet
-                socket.receive(incomingPacket);
-                
-                //retrieve the data
-                String message = new String(incomingPacket.getData());
-                
-                //terminate if it is "THEEND" message from the client
-                if(message.equals("THEEND"))
-                {
-                	socket.close();
-                	break;
+    // method will receive the data from client and send a response back to client
+    public void recieveAndResponse() 
+    {   
+        // infinite loop to keep the server running
+        while (true)
+        {
+            try {
+                System.out.println("Waiting to receive packet...");
+                // datagram allows connectionless communication
+                DatagramPacket datagramPacket = new DatagramPacket(buffer, buffer.length);
+
+                // blocking method (halts program) until datagram is received, and stores data
+                datagramSocket.receive(datagramPacket);
+                System.out.println("Packet received.");
+            
+                // gets the address and port number of the current client
+                InetAddress inetAddress = datagramPacket.getAddress();
+                int portNumber = datagramPacket.getPort();
+
+                // converts the data received from client from byte to string
+                String clientMessage = new String(datagramPacket.getData(), 0, datagramPacket.getLength());
+
+                // Check if the message is a broadcast message sent by the server itself
+                if (clientMessage.startsWith("Client statuses:")) {
+                    System.out.println("Ignoring broadcast message: " + clientMessage);
+                    continue;
                 }
-                System.out.println("Received message from client: " + message);
-                System.out.println("Client Details:PORT " + incomingPacket.getPort()
-                + ", IP Address:" + incomingPacket.getAddress());
+
+                // Parse the data received from the client
+                String[] parts = clientMessage.split(",");
+                if (parts.length >= 3) {
+                    String statusPart = parts[0];
+                    String timestampPart = parts[1];
+                    String filesPart = parts[2];
+                    
+                    if (statusPart.startsWith("Status:") && timestampPart.startsWith("Timestamp:") && filesPart.startsWith("Files:")) {
+                        String status = statusPart.split(":")[1];
+                        String timestamp = timestampPart.split(":")[1];
+                        String files = filesPart.substring(6); // Remove "Files:" prefix
+                        
+                        // Check if the client data already exists
+                        boolean clientExists = false;
+                        for (ClientData clientData : clientDataList) {
+                            if (clientData.getIpAddress().equals(inetAddress.toString()) && clientData.getPort() == portNumber) {
+                                // Update the existing client data
+                                clientData.setStatus(status);
+                                clientData.setTimestamp(timestamp);
+                                clientData.setFiles(files);
+                                clientExists = true;
+                                break;
+                            }
+                        }
+                        
+                        // If the client data does not exist, add a new entry
+                        if (!clientExists) {
+                            ClientData clientData = new ClientData(inetAddress.toString(), portNumber, status, timestamp, files);
+                            clientDataList.add(clientData);
+                        }
+                        
+                        System.out.println("Client: " + inetAddress.toString() + ":" + portNumber + " - Status: " + status + ", Timestamp: " + timestamp);
+                        System.out.println("Files:");
+                        for (String file : files.split(",")) {
+                            System.out.println(" - " + file);
+                        }
+                    } else {
+                        System.out.println("Invalid message format: " + clientMessage);
+                    }
+                } else {
+                    System.out.println("Invalid message format: " + clientMessage);
+                }
                 
-                //retrieve client socket info and create response packet
-                InetAddress IPAddress = incomingPacket.getAddress();
-                int port = incomingPacket.getPort();
-                String reply = "Thank you for the message";
-                byte[] data = reply.getBytes();
-                DatagramPacket replyPacket =
-                        new DatagramPacket(data, data.length, IPAddress, port);
-                socket.send(replyPacket);
+                // Prepare response packet
+                String responseMessage = "Received: Status and files";
+                byte[] responseBuffer = responseMessage.getBytes();
+                DatagramPacket responsePacket = new DatagramPacket(responseBuffer, responseBuffer.length, inetAddress, portNumber);
+                datagramSocket.send(responsePacket);
+                
+                // Clear the buffer
+                buffer = new byte[1024];
+            } catch (IOException e) 
+            {
+                e.printStackTrace();
+                break;
             }
-        } 
-        catch (SocketException e) 
-        {
-            e.printStackTrace();
-        } 
-        catch (IOException i) 
-        {
-            i.printStackTrace();
-        } 
+        }
     }
 
-    public static void main(String[] args) 
+    // method to print the status of all clients
+    public void printClientStatuses() {
+        System.out.println("Current client statuses:");
+        for (ClientData clientData : clientDataList) {
+            System.out.println(clientData);
+        }
+    }
+
+    // method to send the status of all clients
+    public void sendClientStatuses() {
+        try {
+            // Create a StringBuilder to construct the status message
+            StringBuilder statusMessage = new StringBuilder("Client statuses:\n");
+            
+            // Iterate through the clientDataList to append each client's status to the message
+            for (ClientData clientData : clientDataList) {
+                statusMessage.append(clientData).append("\n");
+            }
+            
+            // Convert the status message to a byte array
+            byte[] statusBuffer = statusMessage.toString().getBytes();
+            
+            // Define the broadcast address to send the status message to all clients
+            InetAddress broadcastAddress = InetAddress.getByName("255.255.255.255"); // Broadcast address
+            
+            // Create a DatagramPacket to send the status message
+            DatagramPacket statusPacket = new DatagramPacket(statusBuffer, statusBuffer.length, broadcastAddress, 9876);
+            
+            // Send the status packet
+            datagramSocket.send(statusPacket);
+        } catch (IOException e) {
+            // Print the stack trace if an IOException occurs
+            e.printStackTrace();
+        }
+    }
+
+    // Main method to start the server
+    public static void main(String[] args) throws SocketException 
     {
-        UDPServer2 server = new UDPServer2();
-        server.createAndListenSocket();
+        // Create a datagram socket on port 9876
+        DatagramSocket datagramSocket = new DatagramSocket(9876); 
+        // Create a new UDPServer2 instance
+        UDPServer2 server = new UDPServer2(datagramSocket); 
+        System.err.println("Server has started");
+        
+        // Thread to send client statuses every 30 seconds
+        new Thread(() -> {
+            while (true) {
+                try {
+                    Thread.sleep(30000); // Send statuses every 30 seconds
+                    server.sendClientStatuses();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        }).start();
+        
+        // Start receiving and responding to client messages
+        server.recieveAndResponse(); 
+    }
+}
+
+// Custom class to hold client data
+class ClientData {
+    private String ipAddress;
+    private int port;
+    private String status;
+    private String timestamp;
+    private String files;
+
+    public ClientData(String ipAddress, int port, String status, String timestamp, String files) {
+        this.ipAddress = ipAddress;
+        this.port = port;
+        this.status = status;
+        this.timestamp = timestamp;
+        this.files = files;
+    }
+
+    public String getIpAddress() {
+        return ipAddress;
+    }
+
+    public int getPort() {
+        return port;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public String getTimestamp() {
+        return timestamp;
+    }
+
+    public void setTimestamp(String timestamp) {
+        this.timestamp = timestamp;
+    }
+
+    public String getFiles() {
+        return files;
+    }
+
+    public void setFiles(String files) {
+        this.files = files;
+    }
+
+    @Override
+    public String toString() {
+        return "Client: " + ipAddress + ":" + port + " - Status: " + status + ", Timestamp: " + timestamp + ", Files: " + files;
     }
 }
