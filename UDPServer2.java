@@ -3,6 +3,8 @@ import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
 import java.net.SocketException;
+import java.time.Duration;
+import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -32,7 +34,7 @@ public class UDPServer2
                 // datagram allows connectionless communication
                 DatagramPacket datagramPacket = new DatagramPacket(buffer, buffer.length);
 
-                // blocking method (halts program) until datagram is received, and stores data
+                // blocking method that halts program until datagram is received, and stores data
                 datagramSocket.receive(datagramPacket);
                 System.out.println("Packet received.");
             
@@ -66,9 +68,10 @@ public class UDPServer2
                         for (ClientData clientData : clientDataList) {
                             if (clientData.getIpAddress().equals(inetAddress.toString()) && clientData.getPort() == portNumber) {
                                 // Update the existing client data
-                                clientData.setStatus(status);
+                                clientData.setStatus("alive");
                                 clientData.setTimestamp(timestamp);
                                 clientData.setFiles(files);
+                                clientData.updateLastPacketTime();
                                 clientExists = true;
                                 break;
                             }
@@ -76,7 +79,7 @@ public class UDPServer2
                         
                         // If the client data does not exist, add a new entry
                         if (!clientExists) {
-                            ClientData clientData = new ClientData(inetAddress.toString(), portNumber, status, timestamp, files);
+                            ClientData clientData = new ClientData(inetAddress.toString(), portNumber, "alive", timestamp, files);
                             clientDataList.add(clientData);
                         }
                         
@@ -124,6 +127,10 @@ public class UDPServer2
             
             // Iterate through the clientDataList to append each client's status to the message
             for (ClientData clientData : clientDataList) {
+                // Check if the client is "dead"
+                if (Duration.between(clientData.getLastPacketTime(), Instant.now()).getSeconds() > 45) {
+                    clientData.setStatus("dead");
+                }
                 statusMessage.append(clientData).append("\n");
             }
             
@@ -167,59 +174,5 @@ public class UDPServer2
         
         // Start receiving and responding to client messages
         server.recieveAndResponse(); 
-    }
-}
-
-// Custom class to hold client data
-class ClientData {
-    private String ipAddress;
-    private int port;
-    private String status;
-    private String timestamp;
-    private String files;
-
-    public ClientData(String ipAddress, int port, String status, String timestamp, String files) {
-        this.ipAddress = ipAddress;
-        this.port = port;
-        this.status = status;
-        this.timestamp = timestamp;
-        this.files = files;
-    }
-
-    public String getIpAddress() {
-        return ipAddress;
-    }
-
-    public int getPort() {
-        return port;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
-    public String getTimestamp() {
-        return timestamp;
-    }
-
-    public void setTimestamp(String timestamp) {
-        this.timestamp = timestamp;
-    }
-
-    public String getFiles() {
-        return files;
-    }
-
-    public void setFiles(String files) {
-        this.files = files;
-    }
-
-    @Override
-    public String toString() {
-        return "Client: " + ipAddress + ":" + port + " - Status: " + status + ", Timestamp: " + timestamp + ", Files: " + files;
     }
 }

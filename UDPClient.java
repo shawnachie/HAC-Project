@@ -26,13 +26,19 @@ public class UDPClient
     // Method to retrieve the list of files from the home directory
     private List<String> getFileNames()
     {
+        // Define the home directory
         File directory = new File(HOME_DIRECTORY);
+        
+        // Check if the directory exists and is a directory
         if (!directory.exists() || !directory.isDirectory()) {
             System.err.println("Directory does not exist: " + HOME_DIRECTORY);
             return List.of();
         }
 
+        // List the files in the directory (excluding subfolders)
         String[] files = directory.list((dir, name) -> new File(dir, name).isFile());
+        
+        // Return the list of files as a List<String>
         return (files != null) ? Arrays.asList(files) : List.of();
     }
     
@@ -46,22 +52,29 @@ public class UDPClient
                 // Generate the status and timestamp
                 String status = "alive";
                 long timestamp = System.currentTimeMillis();
+                
                 // Retrieve the list of files from the home directory
                 List<String> fileNames = getFileNames();
-                // Create a message to send to the server
+                
+                // Create a message to send to the server, including status, timestamp, and file names
                 String messageToSend = "Status:" + status + ",Timestamp:" + timestamp + ",Files:" + String.join(",", fileNames);
+                
                 // Convert the message to byte array
                 buffer = messageToSend.getBytes();
+                
                 // Create a datagram packet to send to the server
                 DatagramPacket datagramPacket = new DatagramPacket(buffer, buffer.length, inetAddress, 9876);
+                
                 // Send the packet to the server
                 datagramSocket.send(datagramPacket);
+                
                 // Sleep for a while before sending the next packet
                 long delay = secureRandom.nextInt(30) + 1; // Random delay between 1 and 30 seconds
                 TimeUnit.SECONDS.sleep(delay);
             }
             catch (IOException | InterruptedException e)
             {
+                // Print the stack trace if an exception occurs
                 e.printStackTrace();
                 break;
             }
