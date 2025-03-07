@@ -23,7 +23,7 @@ public class UDPClient2
 
     public static void main(String[] args) {
         UDPClient2 client = new UDPClient2();
-        client.sendPackets();
+        //client.sendPackets();
     }
     
     //comment for now since we dont have IP yet and i got errors
@@ -59,14 +59,14 @@ public class UDPClient2
     }
 
     // Method to send the packet at random intervals
-    private void sendPackets() {
+    /*private void sendPackets() {
         try {
             while (true) {
                 String status = "ALIVE";
                 Packet packet = createPacket(status); // Create a packet with status and file list
 
                 // Send the packet as a JSON string
-                DatagramPacket sendPacket = new DatagramPacket(packet.encode().getBytes(), packet.encode().length(),/*  IPAddress,*/ serverPort);
+                DatagramPacket sendPacket = new DatagramPacket(packet.encode().getBytes(), packet.encode().length(), //IPAddress//, serverPort);
                 socket.send(sendPacket);
 
                 System.out.println("Sent packet: " + packet); // Print the sent packet for debugging
@@ -78,6 +78,6 @@ public class UDPClient2
         } catch (IOException | InterruptedException e) {
             e.printStackTrace();
         }
-    }
+    }*/
 
 }

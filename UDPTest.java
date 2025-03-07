@@ -7,7 +7,7 @@ public class UDPTest {
 
         // Send the packet to localhost (127.0.0.1)
         UDPSender.sendPacket(testPacket, "127.0.0.1", 5001);
-
+        
         // Start listening for packets this is suppose to run in a diff thread
         UDPReceiver.ListenForPacket(5001);
     }
