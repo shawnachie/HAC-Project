@@ -49,7 +49,7 @@ public class Packet {
             long timestamp = buffer.getLong();
             List<String> fileList = Arrays.asList(getString(buffer).split(","));
 
-            System.out.println("Decoded packet: " + mode + " " + nodeId + " " + status + " " + fileList + " " + timestamp);
+            System.out.println("Decoded packet: "+ mode + " " + nodeId + " " + status + " " + fileList + " " + timestamp);
 
             return new Packet(mode, nodeId, status, fileList);
         } catch (Exception e) {
