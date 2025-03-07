@@ -1,3 +1,5 @@
+package ServerClient.src;
+
 import java.time.Instant;
 
 public class ClientData {
@@ -59,6 +61,13 @@ public class ClientData {
 
     @Override
     public String toString() {
-        return "Client: " + ipAddress + ":" + port + " - Status: " + status + ", Timestamp: " + timestamp + ", Files: " + files;
+        return "ClientData{" +
+                "ipAddress='" + ipAddress + '\'' +
+                ", port=" + port +
+                ", status='" + status + '\'' +
+                ", timestamp='" + timestamp + '\'' +
+                ", files='" + files + '\'' +
+                ", lastPacketTime=" + lastPacketTime +
+                '}';
     }
 }

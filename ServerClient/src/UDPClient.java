@@ -1,3 +1,5 @@
+package ServerClient.src;
+
 import java.io.File;
 import java.io.IOException;
 import java.net.DatagramPacket;
@@ -13,14 +15,22 @@ import java.security.SecureRandom;
 
 public class UDPClient {
     private DatagramSocket datagramSocket;
-    private InetAddress inetAddress;
+    private InetAddress serverAddress;
     private SecureRandom secureRandom = new SecureRandom();
     private static final String HOME_DIRECTORY = System.getProperty("user.home");
+    private String nodeId;
+    private String mode;
+    private List<String> nodeIps;
+    private int udpPort;
 
     // Constructor to initialize the datagram socket and server address
-    public UDPClient(DatagramSocket datagramSocket, InetAddress inetAddress) {
+    public UDPClient(DatagramSocket datagramSocket, InetAddress serverAddress, String nodeId, String mode, List<String> nodeIps, int udpPort) {
         this.datagramSocket = datagramSocket;
-        this.inetAddress = inetAddress;
+        this.serverAddress = serverAddress;
+        this.nodeId = nodeId;
+        this.mode = mode;
+        this.nodeIps = nodeIps;
+        this.udpPort = udpPort;
     }
 
     // Method to retrieve the list of files from the home directory
@@ -42,12 +52,23 @@ public class UDPClient {
                 String status = "alive";
                 long timestamp = System.currentTimeMillis();
                 List<String> fileNames = getFileNames();
-                String messageToSend = "Status:" + status + ",Timestamp:" + timestamp + ",Files:" + String.join(",", fileNames);
-                byte[] buffer = messageToSend.getBytes();
+
+                // Create a Packet object
+                Packet packet = new Packet(mode, nodeId, status, fileNames);
+
+                // Encode the Packet object to a byte array
+                byte[] buffer = packet.encode();
 
                 // Create and send UDP packet to the server
-                DatagramPacket datagramPacket = new DatagramPacket(buffer, buffer.length, inetAddress, 9876);
-                System.out.println("Sending packet to server.");
+                DatagramPacket datagramPacket = new DatagramPacket(buffer, buffer.length, serverAddress, udpPort);
+                System.out.println("Sending packet to server at " + serverAddress.getHostAddress() + ":" + udpPort);
+
+                // Print the files in the desired format
+                System.out.println("Files:");
+                for (String file : fileNames) {
+                    System.out.println(" - " + file);
+                }
+
                 datagramSocket.send(datagramPacket);
 
                 // Wait for a random delay before sending the next status
@@ -62,6 +83,7 @@ public class UDPClient {
 
     // Method to listen for server status messages
     public void listenForServerStatus() {
+        boolean headerPrinted = false; // Flag to check if the header has been printed
         while (true) {
             try {
                 // Prepare buffer to receive data
@@ -75,14 +97,19 @@ public class UDPClient {
                 int serverPort = datagramPacket.getPort();
 
                 // Process the received message
-                if (serverMessage.startsWith("Client statuses:")) {
-                    
+                if (serverMessage.startsWith("Active Client statuses:")) {
+                    if (!headerPrinted) {
+                        System.out.println("Active Client statuses:");
+                        headerPrinted = true;
+                    }
                     String[] clientStatuses = serverMessage.split("\n");
                     for (String clientStatus : clientStatuses) {
-                        System.out.println(clientStatus);
+                        if (!clientStatus.equals("Active Client statuses:")) {
+                            System.out.println(clientStatus);
+                        }
                     }
                 } else {
-                    System.out.println("Server Received Packet from " + serverAddress + ":" + serverPort + " - " + serverMessage);
+                    System.out.println("Server Received from " + serverAddress + ":" + serverPort + " - " + serverMessage);
                 }
             } catch (IOException e) {
                 e.printStackTrace();
@@ -109,12 +136,28 @@ public class UDPClient {
 
     // Main method to start the client
     public static void main(String[] args) throws Exception {
+        // Load configuration
+        ConfigLoader config = new ConfigLoader("ServerClient/clientconfig.properties");
+        String nodeId = config.getString("node.id");
+        String mode = config.getString("node.mode");
+        List<String> nodeIps = config.getList("node.ips");
+        int udpPort = config.getInt("udp.port");
+
+        // Validate configuration
+        if (udpPort == 0) {
+            System.err.println("Invalid UDP port: " + udpPort);
+            return;
+        }
+
+        // Get the server IP address from the configuration
+        InetAddress serverAddress = InetAddress.getByName(nodeIps.get(0));
+
         // Create a datagram socket
         DatagramSocket datagramSocket = new DatagramSocket();
 
         // Get the local IP address of the device
         InetAddress inetAddress = getLocalIpAddress();
-        UDPClient client = new UDPClient(datagramSocket, inetAddress);
+        UDPClient client = new UDPClient(datagramSocket, serverAddress, nodeId, mode, nodeIps, udpPort);
         System.out.println("Client has started with IP address: " + inetAddress.getHostAddress());
 
         // Thread to listen for server status messages
