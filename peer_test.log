@@ -1,0 +1,82 @@
+Mar 18, 2025 7:08:19 AM Peer2Peer.PeerDeadAliveTest log
+INFO: Starting P2P Dead-Alive Test
+Mar 18, 2025 7:08:19 AM Peer2Peer.PeerDeadAliveTest log
+INFO: Created config file with peers on ports 5000, 5001, and 5002
+Mar 18, 2025 7:08:19 AM Peer2Peer.PeerDeadAliveTest log
+INFO: Starting all peers...
+Mar 18, 2025 7:08:19 AM Peer2Peer.PeerDeadAliveTest log
+INFO: Starting peer on port 5000 with files: [file1.txt, file2.txt]
+Mar 18, 2025 7:08:19 AM Peer2Peer.PeerDeadAliveTest log
+INFO: Starting peer on port 5001 with files: [file3.txt, file4.txt]
+Mar 18, 2025 7:08:19 AM Peer2Peer.PeerDeadAliveTest log
+INFO: Starting peer on port 5002 with files: [file5.txt, file6.txt]
+Mar 18, 2025 7:08:19 AM Peer2Peer.PeerDeadAliveTest log
+INFO: Letting peers discover each other (15 seconds)...
+Mar 18, 2025 7:08:19 AM Peer2Peer.PeerDeadAliveTest log
+INFO: Note: Peer IDs are calculated as port*2, so we're looking for IDs 10000, 10002, 10004
+Mar 18, 2025 7:08:19 AM Peer2Peer.PeerDeadAliveTest log
+INFO: Expected behavior: All peers should show in each other's network status
+Mar 18, 2025 7:08:34 AM Peer2Peer.PeerDeadAliveTest log
+INFO: ============ KILLING PEER ON PORT 5001 (ID 10002) ============
+Mar 18, 2025 7:08:34 AM Peer2Peer.PeerDeadAliveTest log
+INFO: Killing peer on port 5001 (ID 10002)...
+Mar 18, 2025 7:08:34 AM Peer2Peer.PeerDeadAliveTest log
+INFO: 
+========== WAITING FOR DEAD PEER DETECTION ==========
+
+Mar 18, 2025 7:08:35 AM Peer2Peer.PeerDeadAliveTest log
+INFO: 
+========== WAITING FOR DEAD PEER DETECTION ==========
+
+Mar 18, 2025 7:08:36 AM Peer2Peer.PeerDeadAliveTest log
+INFO: 
+========== WAITING FOR DEAD PEER DETECTION ==========
+
+Mar 18, 2025 7:08:37 AM Peer2Peer.PeerDeadAliveTest log
+INFO: Waiting for peers to detect dead peer (35 seconds)...
+Mar 18, 2025 7:08:37 AM Peer2Peer.PeerDeadAliveTest log
+INFO: Expected behavior: After 30 seconds, peers 10000 and 10004 should log 'Peer 10002 is dead'
+Mar 18, 2025 7:08:42 AM Peer2Peer.PeerDeadAliveTest log
+INFO: Still waiting for dead peer detection... 30 seconds remaining
+Mar 18, 2025 7:08:47 AM Peer2Peer.PeerDeadAliveTest log
+INFO: Still waiting for dead peer detection... 25 seconds remaining
+Mar 18, 2025 7:08:52 AM Peer2Peer.PeerDeadAliveTest log
+INFO: Still waiting for dead peer detection... 20 seconds remaining
+Mar 18, 2025 7:08:57 AM Peer2Peer.PeerDeadAliveTest log
+INFO: Still waiting for dead peer detection... 15 seconds remaining
+Mar 18, 2025 7:09:02 AM Peer2Peer.PeerDeadAliveTest log
+INFO: Still waiting for dead peer detection... 10 seconds remaining
+Mar 18, 2025 7:09:07 AM Peer2Peer.PeerDeadAliveTest log
+INFO: Still waiting for dead peer detection... 5 seconds remaining
+Mar 18, 2025 7:09:12 AM Peer2Peer.PeerDeadAliveTest log
+INFO: Still waiting for dead peer detection... 0 seconds remaining
+Mar 18, 2025 7:09:12 AM Peer2Peer.PeerDeadAliveTest log
+INFO: ============ RESTARTING PEER ON PORT 5001 (ID 10002) ============
+Mar 18, 2025 7:09:12 AM Peer2Peer.PeerDeadAliveTest log
+INFO: 
+========== PEER RESTART INITIATED ==========
+
+Mar 18, 2025 7:09:13 AM Peer2Peer.PeerDeadAliveTest log
+INFO: 
+========== PEER RESTART INITIATED ==========
+
+Mar 18, 2025 7:09:14 AM Peer2Peer.PeerDeadAliveTest log
+INFO: 
+========== PEER RESTART INITIATED ==========
+
+Mar 18, 2025 7:09:15 AM Peer2Peer.PeerDeadAliveTest log
+INFO: Starting peer on port 5001 with files: [file3.txt, file4.txt]
+Mar 18, 2025 7:09:15 AM Peer2Peer.PeerDeadAliveTest log
+INFO: Waiting for peers to detect peer is back online (15 seconds)...
+Mar 18, 2025 7:09:15 AM Peer2Peer.PeerDeadAliveTest log
+INFO: Expected behavior: Peers 10000 and 10004 should log 'Peer 10002 is back online'
+Mar 18, 2025 7:09:20 AM Peer2Peer.PeerDeadAliveTest log
+INFO: Still waiting for peer revival detection... 10 seconds remaining
+Mar 18, 2025 7:09:25 AM Peer2Peer.PeerDeadAliveTest log
+INFO: Still waiting for peer revival detection... 5 seconds remaining
+Mar 18, 2025 7:09:30 AM Peer2Peer.PeerDeadAliveTest log
+INFO: Still waiting for peer revival detection... 0 seconds remaining
+Mar 18, 2025 7:09:30 AM Peer2Peer.PeerDeadAliveTest log
+INFO: Observing for another 30 seconds to confirm stable operation...
+Mar 18, 2025 7:09:30 AM Peer2Peer.PeerDeadAliveTest log
+INFO: Expected behavior: All peers should continue to show as online

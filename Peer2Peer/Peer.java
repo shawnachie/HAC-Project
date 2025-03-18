@@ -10,6 +10,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
+import java.util.logging.*;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -21,6 +22,8 @@ import java.net.InetAddress;
 import java.net.SocketException;
 import java.net.SocketTimeoutException;
 import java.security.SecureRandom;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class Peer {
     private static final String CONFIG_FILE = "Peer2Peer" + File.separator + "config.txt";
@@ -33,11 +36,13 @@ public class Peer {
     private List<Integer> deadPeers;
 
     private int port;
-
+    private int peerId;
     private List<String> fileListing;
 
+    // Logger for this peer
+    private Logger logger;
+
     private static final SecureRandom rand = new SecureRandom();
-    private int peerId;
 
     public Peer(int port, List<String> fileListing) throws SocketException {
         this.peers = new ConcurrentHashMap<>();
@@ -48,6 +53,79 @@ public class Peer {
         this.deadPeers = new ArrayList<>();
         this.fileListing = fileListing;
         this.port = port;
+        
+        // Set up logging
+        setupLogger();
+    }
+
+    /**
+     * Set up the logger for this peer
+     */
+    private void setupLogger() {
+        try {
+            // Create a logger with the peer's port number
+            logger = Logger.getLogger("Peer-" + port);
+            
+            // Remove default handlers to avoid duplicate logging
+            logger.setUseParentHandlers(false);
+            
+            // Create a file handler for this peer's log file
+            FileHandler fileHandler = new FileHandler("peer_" + port + ".log", true);
+            
+            // Use a custom formatter for better log readability
+            fileHandler.setFormatter(new PeerLogFormatter());
+            logger.addHandler(fileHandler);
+            
+            // Also log to console with peer identification
+            ConsoleHandler consoleHandler = new ConsoleHandler();
+            consoleHandler.setFormatter(new PeerConsoleFormatter(port));
+            logger.addHandler(consoleHandler);
+            
+            // Set the log level
+            logger.setLevel(Level.INFO);
+            
+            logger.info("Logger initialized for peer on port " + port);
+        } catch (IOException e) {
+            System.err.println("Failed to set up logger: " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
+    
+    /**
+     * Custom formatter for log files
+     */
+    private static class PeerLogFormatter extends Formatter {
+        private final SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
+        
+        @Override
+        public String format(LogRecord record) {
+            StringBuilder sb = new StringBuilder();
+            sb.append(dateFormat.format(new Date(record.getMillis()))).append(" ");
+            sb.append("[").append(record.getLevel()).append("] ");
+            sb.append(record.getMessage()).append("\n");
+            return sb.toString();
+        }
+    }
+    
+    /**
+     * Custom formatter for console output that includes peer port
+     */
+    private static class PeerConsoleFormatter extends Formatter {
+        private final int port;
+        private final SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
+        
+        public PeerConsoleFormatter(int port) {
+            this.port = port;
+        }
+        
+        @Override
+        public String format(LogRecord record) {
+            StringBuilder sb = new StringBuilder();
+            sb.append("[Port ").append(port).append("] ");
+            sb.append(dateFormat.format(new Date(record.getMillis()))).append(" ");
+            sb.append(record.getMessage()).append("\n");
+            return sb.toString();
+        }
     }
 
     public static void main(String[] args) {
@@ -79,8 +157,7 @@ public class Peer {
                 int port = Integer.parseInt(parts[1]);
                 peerIps.add(ip);
                 peerPorts.add(port);
-                syncPrint("From " + this.port + " Added peer: " + ip + ":" + port);
-                //System.out.println();
+                logger.info("Added peer: " + ip + ":" + port);
             }
         }
     }
@@ -95,9 +172,11 @@ public class Peer {
                     try {
                         DatagramPacket packet = new DatagramPacket(buffer, buffer.length);
                         socket.receive(packet);
+                        
                         InetAddress address = packet.getAddress();
 
                         Packet p = Packet.decode(packet.getData());
+                        logger.fine("Updated alive timestamp for peer " + p.getNodeId());
                         alivePeers.put(Integer.parseInt(p.getNodeId()), System.currentTimeMillis());
 
                         handleAlive(Integer.parseInt(p.getNodeId()));
@@ -106,22 +185,19 @@ public class Peer {
 
                         peers.put(Integer.parseInt(p.getNodeId()), newPeer);
 
-                        //syncPrint("Port " + this.port + " received: " + p);
-                        //syncPrint("From " + this.port + " peers: " + peers.toString());
-
-                        // System.out.println("Port " + this.port + " received: " + p);
-                        // System.out.println("From " + this.port + " peers: " + peers.toString());
+                        // Log at FINE level to reduce console clutter
+                        logger.fine("Received: " + p);
 
                         displayPeers();
 
                     } catch (SocketTimeoutException e) {
-                        System.out.println("Socket timed out, no response in 30 seconds");
+                        logger.warning("Socket timed out, no response in 30 seconds");
                     } catch (IOException e) {
-                        e.printStackTrace();
+                        logger.severe("Error receiving packet: " + e.getMessage());
                     }
                 }
             } catch (SocketException e) {
-                e.printStackTrace();
+                logger.severe("Socket error: " + e.getMessage());
             }
         });
         listenerThread.start();
@@ -131,7 +207,6 @@ public class Peer {
         ScheduledExecutorService executor = Executors.newScheduledThreadPool(1);
 
         executor.scheduleAtFixedRate(() -> {
-
             try (DatagramSocket socket = new DatagramSocket()) {
                 boolean packetSent = false;
 
@@ -142,92 +217,84 @@ public class Peer {
                         DatagramPacket packet = new DatagramPacket(buffer, buffer.length,
                                 InetAddress.getByName(peerIps.get(counter)), peerPorts.get(counter));
                         socket.send(packet);
-                        syncPrint("Sent: packet from " + this.port + ":" + peerId + " to " + peerIps.get(counter) + ":"
-                                        + peerPorts.get(counter));
-                        /*System.out.println(
-                                "Sent: packet from " + this.port + ":" + peerId + " to " + peerIps.get(counter) + ":"
-                                        + peerPorts.get(counter));*/
+                        logger.info("Sent packet to " + peerIps.get(counter) + ":" + peerPorts.get(counter));
                         packetSent = true;
                     } catch (IOException e) {
-                        e.printStackTrace();
+                        logger.warning("Failed to send packet to " + peerIps.get(counter) + ":" + 
+                                      peerPorts.get(counter) + " - " + e.getMessage());
                     }
                 }
 
                 if (!packetSent) {
-                    System.out.println("Failed to send packet");
+                    logger.warning("Failed to send any packets");
                 }
             } catch (SocketException e) {
-                e.printStackTrace();
+                logger.severe("Socket error: " + e.getMessage());
             }
-
         }, 0, rand.nextInt(MAX_INTERVAL), TimeUnit.SECONDS);
     }
 
     private void handleAlive(int peerId) {
         if (deadPeers.contains(peerId)) {
-            syncPrint("Peer " + peerId + " is back online");
-            //System.out.println("Peer " + peerId + " is back online");
-            deadPeers.remove(peerId);
+            logger.info("Peer " + peerId + " is back online");
+            deadPeers.remove(Integer.valueOf(peerId));
         } else {
-            syncPrint("Peer " + peerId + " is still online");
-            //System.out.println("Peer " + peerId + " is still online");
+            logger.fine("Peer " + peerId + " is still online");
         }
     }
 
     private void checkAlive() {
         ScheduledExecutorService executor = Executors.newScheduledThreadPool(1);
-
+        logger.info("Running alive check at " + new Date());
+    
         executor.scheduleAtFixedRate(() -> {
             long currTime = System.currentTimeMillis();
-
+            List<Integer> peersToRemove = new ArrayList<>();
+    
             alivePeers.forEach((peerId, lastAlive) -> {
                 if (currTime - lastAlive > 30000) {
-                    syncPrint("Peer " + peerId + " is dead");
-                    //System.out.println("Peer " + peerId + " is dead");
+                    logger.info("Peer " + peerId + " is dead");
                     deadPeers.add(peerId);
-                    alivePeers.remove(peerId);
-                    peers.remove(peerId);
+                    peersToRemove.add(peerId);
                 }
             });
-
-        }, 0, MAX_INTERVAL, TimeUnit.SECONDS);
+    
+            peersToRemove.forEach(peerId -> {
+                alivePeers.remove(peerId);
+                peers.remove(peerId);
+            });
+        }, 0, 5, TimeUnit.SECONDS);
     }
-
-    private static final Object PRINT_LOCK = new Object();
 
     public void displayPeers() {
-        synchronized (PRINT_LOCK) {
-            if (peers.isEmpty()) {
-                System.out.println("No peers currently connected.");
-                return;
-            }
-
-            System.out.println("\n====== PEER NETWORK STATUS (Port: " + this.port + ") ======");
-            System.out.println("ID\tIP Address\tMode\tStatus\tFiles");
-            System.out.println("----------------------------------------");
-
-            for (Map.Entry<Integer, PeerInfo> entry : peers.entrySet()) {
-                Integer id = entry.getKey();
-                PeerInfo info = entry.getValue();
-
-                String fileList = String.join(", ", info.getFileList());
-                if (fileList.length() > 40) {
-                    fileList = fileList.substring(0, 37) + "...";
-                }
-
-                System.out.println(id + "\t" +
-                        info.getIp() + "\t" +
-                        info.getMode() + "\t" +
-                        info.getStatus() + "\t" +
-                        fileList);
-            }
-            System.out.println();
+        StringBuilder sb = new StringBuilder();
+        sb.append("\n====== PEER NETWORK STATUS (Port: ").append(this.port).append(") ======\n");
+        
+        if (peers.isEmpty()) {
+            sb.append("No peers currently connected.\n");
+            logger.info(sb.toString());
+            return;
         }
-    }
-
-    private void syncPrint(String message) {
-        synchronized(PRINT_LOCK) {
-            System.out.println("[Port " + this.port + "] " + message);
+        
+        sb.append("ID\tIP Address\tMode\tStatus\tFiles\n");
+        sb.append("----------------------------------------\n");
+        
+        for (Map.Entry<Integer, PeerInfo> entry : peers.entrySet()) {
+            Integer id = entry.getKey();
+            PeerInfo info = entry.getValue();
+            
+            String fileList = String.join(", ", info.getFileList());
+            if (fileList.length() > 40) {
+                fileList = fileList.substring(0, 37) + "...";
+            }
+            
+            sb.append(id).append("\t")
+              .append(info.getIp()).append("\t")
+              .append(info.getMode()).append("\t")
+              .append(info.getStatus()).append("\t")
+              .append(fileList).append("\n");
         }
+        
+        logger.info(sb.toString());
     }
 }

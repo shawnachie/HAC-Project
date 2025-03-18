@@ -1,0 +1,1407 @@
+2025-03-18 06:35:39.550 [INFO] Logger initialized for peer on port 5002
+2025-03-18 06:35:39.561 [INFO] Added peer: 127.0.0.1:5000
+2025-03-18 06:35:39.561 [INFO] Added peer: 127.0.0.1:5001
+2025-03-18 06:35:39.562 [INFO] Added peer: 127.0.0.1:5002
+2025-03-18 06:35:39.640 [INFO] Sent packet to 127.0.0.1:5000
+2025-03-18 06:35:39.640 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+
+2025-03-18 06:35:39.640 [INFO] Sent packet to 127.0.0.1:5001
+2025-03-18 06:35:39.641 [INFO] Sent packet to 127.0.0.1:5002
+2025-03-18 06:35:39.641 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+
+2025-03-18 06:35:39.642 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:35:52.613 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:36:00.633 [INFO] Sent packet to 127.0.0.1:5000
+2025-03-18 06:36:00.633 [INFO] Sent packet to 127.0.0.1:5001
+2025-03-18 06:36:00.633 [INFO] Sent packet to 127.0.0.1:5002
+2025-03-18 06:36:00.639 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:36:05.628 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:36:18.629 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:36:21.641 [INFO] Sent packet to 127.0.0.1:5000
+2025-03-18 06:36:21.642 [INFO] Sent packet to 127.0.0.1:5001
+2025-03-18 06:36:21.645 [INFO] Sent packet to 127.0.0.1:5002
+2025-03-18 06:36:21.646 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:36:31.623 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:36:35.720 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:36:42.638 [INFO] Sent packet to 127.0.0.1:5000
+2025-03-18 06:36:42.640 [INFO] Sent packet to 127.0.0.1:5001
+2025-03-18 06:36:42.640 [INFO] Sent packet to 127.0.0.1:5002
+2025-03-18 06:36:42.640 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:36:44.621 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:36:53.731 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:36:57.631 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:37:03.633 [INFO] Sent packet to 127.0.0.1:5000
+2025-03-18 06:37:03.633 [INFO] Sent packet to 127.0.0.1:5001
+2025-03-18 06:37:03.636 [INFO] Sent packet to 127.0.0.1:5002
+2025-03-18 06:37:03.636 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:37:10.616 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:37:11.723 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:43:28.549 [INFO] Logger initialized for peer on port 5002
+2025-03-18 06:43:28.571 [INFO] Added peer: 127.0.0.1:5000
+2025-03-18 06:43:28.572 [INFO] Added peer: 127.0.0.1:5001
+2025-03-18 06:43:28.573 [INFO] Added peer: 127.0.0.1:5002
+2025-03-18 06:43:28.662 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+
+2025-03-18 06:43:28.662 [INFO] Sent packet to 127.0.0.1:5000
+2025-03-18 06:43:28.663 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+
+2025-03-18 06:43:28.664 [INFO] Sent packet to 127.0.0.1:5001
+2025-03-18 06:43:28.667 [INFO] Sent packet to 127.0.0.1:5002
+2025-03-18 06:43:28.668 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:43:29.641 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:43:30.644 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:43:31.644 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:43:32.634 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:43:33.634 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:43:33.642 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:43:34.637 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:43:35.649 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:43:36.639 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:43:37.640 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:43:38.639 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:43:38.646 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:43:39.641 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:43:40.648 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:43:41.638 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:43:42.639 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:43:43.630 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:43:44.638 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:43:45.632 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:43:46.638 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:43:46.664 [INFO] Sent packet to 127.0.0.1:5000
+2025-03-18 06:43:46.665 [INFO] Sent packet to 127.0.0.1:5001
+2025-03-18 06:43:46.668 [INFO] Sent packet to 127.0.0.1:5002
+2025-03-18 06:43:46.668 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:43:47.638 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:43:48.642 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:43:49.639 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:43:50.644 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:43:51.635 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:43:52.633 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:43:53.639 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:43:54.640 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:43:55.634 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:43:56.635 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:43:57.637 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:43:58.636 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:43:59.636 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:44:00.643 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:44:01.635 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:44:02.642 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:44:03.638 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:44:04.645 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:44:04.655 [INFO] Sent packet to 127.0.0.1:5000
+2025-03-18 06:44:04.656 [INFO] Sent packet to 127.0.0.1:5001
+2025-03-18 06:44:04.659 [INFO] Sent packet to 127.0.0.1:5002
+2025-03-18 06:44:04.659 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:44:05.644 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:44:06.634 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:44:07.639 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:44:08.645 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:44:08.655 [INFO] Peer 10002 is dead
+2025-03-18 06:44:09.638 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:44:10.636 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:44:11.634 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:44:12.637 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:44:13.638 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:44:14.639 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:44:15.635 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:44:16.630 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:44:17.634 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:44:18.646 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:44:19.637 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:44:20.644 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:44:21.644 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:44:22.634 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:44:22.660 [INFO] Sent packet to 127.0.0.1:5000
+2025-03-18 06:44:22.662 [INFO] Sent packet to 127.0.0.1:5001
+2025-03-18 06:44:22.665 [INFO] Sent packet to 127.0.0.1:5002
+2025-03-18 06:44:22.665 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:44:23.634 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:44:24.610 [INFO] Peer 10002 is back online
+2025-03-18 06:45:16.274 [INFO] Logger initialized for peer on port 5002
+2025-03-18 06:45:16.287 [INFO] Added peer: 127.0.0.1:5000
+2025-03-18 06:45:16.288 [INFO] Added peer: 127.0.0.1:5001
+2025-03-18 06:45:16.288 [INFO] Added peer: 127.0.0.1:5002
+2025-03-18 06:45:16.378 [INFO] Sent packet to 127.0.0.1:5000
+2025-03-18 06:45:16.378 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+
+2025-03-18 06:45:16.380 [INFO] Sent packet to 127.0.0.1:5001
+2025-03-18 06:45:16.381 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+
+2025-03-18 06:45:16.381 [INFO] Sent packet to 127.0.0.1:5002
+2025-03-18 06:45:16.382 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:45:28.351 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:45:40.359 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:45:44.366 [INFO] Sent packet to 127.0.0.1:5000
+2025-03-18 06:45:44.366 [INFO] Sent packet to 127.0.0.1:5001
+2025-03-18 06:45:44.366 [INFO] Sent packet to 127.0.0.1:5002
+2025-03-18 06:45:44.366 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:45:52.349 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:46:04.363 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:46:12.365 [INFO] Sent packet to 127.0.0.1:5000
+2025-03-18 06:46:12.367 [INFO] Sent packet to 127.0.0.1:5001
+2025-03-18 06:46:12.368 [INFO] Sent packet to 127.0.0.1:5002
+2025-03-18 06:46:12.368 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:46:12.506 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:46:16.356 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:46:26.572 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:46:28.351 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:46:40.357 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:46:40.363 [INFO] Sent packet to 127.0.0.1:5000
+2025-03-18 06:46:40.366 [INFO] Sent packet to 127.0.0.1:5001
+2025-03-18 06:46:40.368 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:46:40.368 [INFO] Sent packet to 127.0.0.1:5002
+2025-03-18 06:46:40.509 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:46:52.346 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:46:54.514 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:55:22.877 [INFO] Logger initialized for peer on port 5002
+2025-03-18 06:55:22.885 [INFO] Added peer: 127.0.0.1:5000
+2025-03-18 06:55:22.885 [INFO] Added peer: 127.0.0.1:5001
+2025-03-18 06:55:22.885 [INFO] Added peer: 127.0.0.1:5002
+2025-03-18 06:55:22.941 [INFO] Running alive check at Tue Mar 18 06:55:22 EDT 2025
+2025-03-18 06:55:22.941 [INFO] Sent packet to 127.0.0.1:5000
+2025-03-18 06:55:22.941 [INFO] Sent packet to 127.0.0.1:5001
+2025-03-18 06:55:22.941 [INFO] Sent packet to 127.0.0.1:5002
+2025-03-18 06:55:22.946 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+
+2025-03-18 06:55:22.946 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+
+2025-03-18 06:55:22.948 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:55:32.928 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 06:55:32.961 [INFO] Peer 10002 is dead
+2025-03-18 06:55:32.962 [INFO] Peer 10004 is dead
+2025-03-18 06:55:37.944 [INFO] Sent packet to 127.0.0.1:5000
+2025-03-18 06:55:37.946 [INFO] Sent packet to 127.0.0.1:5001
+2025-03-18 06:55:37.947 [INFO] Sent packet to 127.0.0.1:5002
+2025-03-18 06:55:37.948 [INFO] Peer 10004 is back online
+2025-03-18 06:55:42.950 [INFO] Peer 10000 is dead
+2025-03-18 06:55:47.951 [INFO] Peer 10004 is dead
+2025-03-18 06:55:52.942 [INFO] Sent packet to 127.0.0.1:5000
+2025-03-18 06:55:52.943 [INFO] Sent packet to 127.0.0.1:5001
+2025-03-18 06:55:52.943 [INFO] Sent packet to 127.0.0.1:5002
+2025-03-18 06:56:07.944 [INFO] Sent packet to 127.0.0.1:5000
+2025-03-18 06:56:07.945 [INFO] Sent packet to 127.0.0.1:5001
+2025-03-18 06:56:07.946 [INFO] Sent packet to 127.0.0.1:5002
+2025-03-18 06:56:22.941 [INFO] Sent packet to 127.0.0.1:5000
+2025-03-18 06:56:22.942 [INFO] Sent packet to 127.0.0.1:5001
+2025-03-18 06:56:22.943 [INFO] Sent packet to 127.0.0.1:5002
+2025-03-18 06:56:37.933 [INFO] Sent packet to 127.0.0.1:5000
+2025-03-18 06:56:37.935 [INFO] Sent packet to 127.0.0.1:5001
+2025-03-18 06:56:37.937 [INFO] Sent packet to 127.0.0.1:5002
+2025-03-18 06:56:52.945 [INFO] Sent packet to 127.0.0.1:5000
+2025-03-18 06:56:52.946 [INFO] Sent packet to 127.0.0.1:5001
+2025-03-18 06:56:52.947 [INFO] Sent packet to 127.0.0.1:5002
+2025-03-18 07:00:21.459 [INFO] Logger initialized for peer on port 5002
+2025-03-18 07:00:21.475 [INFO] Added peer: 127.0.0.1:5000
+2025-03-18 07:00:21.476 [INFO] Added peer: 127.0.0.1:5001
+2025-03-18 07:00:21.477 [INFO] Added peer: 127.0.0.1:5002
+2025-03-18 07:00:21.576 [INFO] Running alive check at Tue Mar 18 07:00:21 EDT 2025
+2025-03-18 07:00:21.578 [INFO] Sent packet to 127.0.0.1:5000
+2025-03-18 07:00:21.582 [INFO] Sent packet to 127.0.0.1:5001
+2025-03-18 07:00:21.582 [INFO] Sent packet to 127.0.0.1:5002
+2025-03-18 07:00:21.591 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+
+2025-03-18 07:00:21.593 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+
+2025-03-18 07:00:21.594 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 07:00:31.579 [INFO] Peer 10002 is dead
+2025-03-18 07:00:35.558 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 07:00:36.580 [INFO] Peer 10004 is dead
+2025-03-18 07:00:45.560 [INFO] Sent packet to 127.0.0.1:5000
+2025-03-18 07:00:45.562 [INFO] Sent packet to 127.0.0.1:5001
+2025-03-18 07:00:45.564 [INFO] Sent packet to 127.0.0.1:5002
+2025-03-18 07:00:45.564 [INFO] Peer 10004 is back online
+2025-03-18 07:00:45.565 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 07:00:46.580 [INFO] Peer 10000 is dead
+2025-03-18 07:00:49.557 [INFO] Peer 10000 is back online
+2025-03-18 07:00:49.559 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 07:00:56.591 [INFO] Peer 10004 is dead
+2025-03-18 07:01:01.582 [INFO] Peer 10000 is dead
+2025-03-18 07:01:03.563 [INFO] Peer 10000 is back online
+2025-03-18 07:01:03.564 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+
+2025-03-18 07:01:09.571 [INFO] Sent packet to 127.0.0.1:5000
+2025-03-18 07:01:09.573 [INFO] Sent packet to 127.0.0.1:5001
+2025-03-18 07:01:09.574 [INFO] Sent packet to 127.0.0.1:5002
+2025-03-18 07:01:09.574 [INFO] Peer 10004 is back online
+2025-03-18 07:01:09.576 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 07:01:16.587 [INFO] Peer 10000 is dead
+2025-03-18 07:01:17.499 [INFO] Peer 10002 is back online
+2025-03-18 07:01:17.499 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 07:01:17.553 [INFO] Peer 10000 is back online
+2025-03-18 07:01:17.558 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 07:01:21.501 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 07:01:21.589 [INFO] Peer 10004 is dead
+2025-03-18 07:01:25.502 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+
+2025-03-18 07:01:29.493 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+
+2025-03-18 07:01:31.558 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+
+2025-03-18 07:01:33.500 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+
+2025-03-18 07:01:33.572 [INFO] Sent packet to 127.0.0.1:5000
+2025-03-18 07:01:33.573 [INFO] Sent packet to 127.0.0.1:5001
+2025-03-18 07:01:33.575 [INFO] Sent packet to 127.0.0.1:5002
+2025-03-18 07:01:33.575 [INFO] Peer 10004 is back online
+2025-03-18 07:01:33.582 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 07:01:37.507 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 07:01:41.505 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 07:01:41.590 [INFO] Peer 10000 is dead
+2025-03-18 07:01:45.507 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 07:01:45.550 [INFO] Peer 10000 is back online
+2025-03-18 07:01:45.552 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 07:01:46.587 [INFO] Peer 10004 is dead
+2025-03-18 07:01:49.501 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+
+2025-03-18 07:01:53.504 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+
+2025-03-18 07:01:56.589 [INFO] Peer 10000 is dead
+2025-03-18 07:01:57.507 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+
+2025-03-18 07:01:57.563 [INFO] Sent packet to 127.0.0.1:5000
+2025-03-18 07:01:57.565 [INFO] Sent packet to 127.0.0.1:5001
+2025-03-18 07:01:57.566 [INFO] Sent packet to 127.0.0.1:5002
+2025-03-18 07:01:57.567 [INFO] Peer 10004 is back online
+2025-03-18 07:01:57.569 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 07:01:59.562 [INFO] Peer 10000 is back online
+2025-03-18 07:01:59.569 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 07:02:01.496 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 07:08:19.769 [INFO] Logger initialized for peer on port 5002
+2025-03-18 07:08:19.780 [INFO] Added peer: 127.0.0.1:5000
+2025-03-18 07:08:19.781 [INFO] Added peer: 127.0.0.1:5001
+2025-03-18 07:08:19.781 [INFO] Added peer: 127.0.0.1:5002
+2025-03-18 07:08:19.832 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+
+2025-03-18 07:08:19.853 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+
+2025-03-18 07:08:19.868 [INFO] Sent packet to 127.0.0.1:5000
+2025-03-18 07:08:19.869 [INFO] Sent packet to 127.0.0.1:5001
+2025-03-18 07:08:19.870 [INFO] Sent packet to 127.0.0.1:5002
+2025-03-18 07:08:19.870 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 07:08:19.871 [INFO] Running alive check at Tue Mar 18 07:08:19 EDT 2025
+2025-03-18 07:08:22.867 [INFO] Sent packet to 127.0.0.1:5000
+2025-03-18 07:08:22.868 [INFO] Sent packet to 127.0.0.1:5001
+2025-03-18 07:08:22.870 [INFO] Sent packet to 127.0.0.1:5002
+2025-03-18 07:08:22.871 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 07:08:25.863 [INFO] Sent packet to 127.0.0.1:5000
+2025-03-18 07:08:25.863 [INFO] Sent packet to 127.0.0.1:5001
+2025-03-18 07:08:25.863 [INFO] Sent packet to 127.0.0.1:5002
+2025-03-18 07:08:25.863 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 07:08:28.864 [INFO] Sent packet to 127.0.0.1:5000
+2025-03-18 07:08:28.864 [INFO] Sent packet to 127.0.0.1:5001
+2025-03-18 07:08:28.864 [INFO] Sent packet to 127.0.0.1:5002
+2025-03-18 07:08:28.864 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 07:08:31.872 [INFO] Sent packet to 127.0.0.1:5000
+2025-03-18 07:08:31.874 [INFO] Sent packet to 127.0.0.1:5001
+2025-03-18 07:08:31.878 [INFO] Sent packet to 127.0.0.1:5002
+2025-03-18 07:08:31.878 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 07:08:34.873 [INFO] Sent packet to 127.0.0.1:5000
+2025-03-18 07:08:34.874 [INFO] Sent packet to 127.0.0.1:5001
+2025-03-18 07:08:34.875 [INFO] Sent packet to 127.0.0.1:5002
+2025-03-18 07:08:34.875 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 07:08:37.870 [INFO] Sent packet to 127.0.0.1:5000
+2025-03-18 07:08:37.871 [INFO] Sent packet to 127.0.0.1:5001
+2025-03-18 07:08:37.875 [INFO] Sent packet to 127.0.0.1:5002
+2025-03-18 07:08:37.875 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 07:08:40.867 [INFO] Sent packet to 127.0.0.1:5000
+2025-03-18 07:08:40.868 [INFO] Sent packet to 127.0.0.1:5001
+2025-03-18 07:08:40.872 [INFO] Sent packet to 127.0.0.1:5002
+2025-03-18 07:08:40.872 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 07:08:41.821 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 07:08:43.864 [INFO] Sent packet to 127.0.0.1:5000
+2025-03-18 07:08:43.866 [INFO] Sent packet to 127.0.0.1:5001
+2025-03-18 07:08:43.868 [INFO] Sent packet to 127.0.0.1:5002
+2025-03-18 07:08:43.869 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 07:08:46.865 [INFO] Sent packet to 127.0.0.1:5000
+2025-03-18 07:08:46.865 [INFO] Sent packet to 127.0.0.1:5001
+2025-03-18 07:08:46.865 [INFO] Sent packet to 127.0.0.1:5002
+2025-03-18 07:08:46.865 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 07:08:49.863 [INFO] Sent packet to 127.0.0.1:5000
+2025-03-18 07:08:49.864 [INFO] Sent packet to 127.0.0.1:5001
+2025-03-18 07:08:49.865 [INFO] Sent packet to 127.0.0.1:5002
+2025-03-18 07:08:49.865 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 07:08:49.879 [INFO] Peer 10002 is dead
+2025-03-18 07:08:52.871 [INFO] Sent packet to 127.0.0.1:5000
+2025-03-18 07:08:52.872 [INFO] Sent packet to 127.0.0.1:5001
+2025-03-18 07:08:52.875 [INFO] Sent packet to 127.0.0.1:5002
+2025-03-18 07:08:52.875 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 07:08:55.866 [INFO] Sent packet to 127.0.0.1:5000
+2025-03-18 07:08:55.866 [INFO] Sent packet to 127.0.0.1:5001
+2025-03-18 07:08:55.866 [INFO] Sent packet to 127.0.0.1:5002
+2025-03-18 07:08:55.866 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 07:08:58.868 [INFO] Sent packet to 127.0.0.1:5000
+2025-03-18 07:08:58.869 [INFO] Sent packet to 127.0.0.1:5001
+2025-03-18 07:08:58.872 [INFO] Sent packet to 127.0.0.1:5002
+2025-03-18 07:08:58.873 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 07:09:01.866 [INFO] Sent packet to 127.0.0.1:5000
+2025-03-18 07:09:01.867 [INFO] Sent packet to 127.0.0.1:5001
+2025-03-18 07:09:01.868 [INFO] Sent packet to 127.0.0.1:5002
+2025-03-18 07:09:01.868 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 07:09:03.827 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 07:09:04.867 [INFO] Sent packet to 127.0.0.1:5000
+2025-03-18 07:09:04.868 [INFO] Sent packet to 127.0.0.1:5001
+2025-03-18 07:09:04.869 [INFO] Sent packet to 127.0.0.1:5002
+2025-03-18 07:09:04.869 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 07:09:07.863 [INFO] Sent packet to 127.0.0.1:5000
+2025-03-18 07:09:07.864 [INFO] Sent packet to 127.0.0.1:5001
+2025-03-18 07:09:07.866 [INFO] Sent packet to 127.0.0.1:5002
+2025-03-18 07:09:07.867 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 07:09:10.866 [INFO] Sent packet to 127.0.0.1:5000
+2025-03-18 07:09:10.866 [INFO] Sent packet to 127.0.0.1:5001
+2025-03-18 07:09:10.866 [INFO] Sent packet to 127.0.0.1:5002
+2025-03-18 07:09:10.866 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 07:09:13.875 [INFO] Sent packet to 127.0.0.1:5000
+2025-03-18 07:09:13.876 [INFO] Sent packet to 127.0.0.1:5001
+2025-03-18 07:09:13.879 [INFO] Sent packet to 127.0.0.1:5002
+2025-03-18 07:09:13.880 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 07:09:15.862 [INFO] Peer 10002 is back online
+2025-03-18 07:09:15.862 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 07:09:16.869 [INFO] Sent packet to 127.0.0.1:5000
+2025-03-18 07:09:16.871 [INFO] Sent packet to 127.0.0.1:5001
+2025-03-18 07:09:16.874 [INFO] Sent packet to 127.0.0.1:5002
+2025-03-18 07:09:16.875 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 07:09:19.864 [INFO] Sent packet to 127.0.0.1:5000
+2025-03-18 07:09:19.865 [INFO] Sent packet to 127.0.0.1:5001
+2025-03-18 07:09:19.866 [INFO] Sent packet to 127.0.0.1:5002
+2025-03-18 07:09:19.867 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 07:09:22.869 [INFO] Sent packet to 127.0.0.1:5000
+2025-03-18 07:09:22.870 [INFO] Sent packet to 127.0.0.1:5001
+2025-03-18 07:09:22.873 [INFO] Sent packet to 127.0.0.1:5002
+2025-03-18 07:09:22.873 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 07:09:25.817 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 07:09:25.872 [INFO] Sent packet to 127.0.0.1:5000
+2025-03-18 07:09:25.873 [INFO] Sent packet to 127.0.0.1:5001
+2025-03-18 07:09:25.873 [INFO] Sent packet to 127.0.0.1:5002
+2025-03-18 07:09:25.873 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+
+2025-03-18 07:09:28.871 [INFO] Sent packet to 127.0.0.1:5000
+2025-03-18 07:09:28.872 [INFO] Sent packet to 127.0.0.1:5001
+2025-03-18 07:09:28.874 [INFO] Sent packet to 127.0.0.1:5002
+2025-03-18 07:09:28.874 [INFO] 
+====== PEER NETWORK STATUS (Port: 5002) ======
+ID	IP Address	Mode	Status	Files
+----------------------------------------
+10000	127.0.0.1	P2P	ALIVE	file1.txt, file2.txt
+10002	127.0.0.1	P2P	ALIVE	file3.txt, file4.txt
+10004	127.0.0.1	P2P	ALIVE	file5.txt, file6.txt
+

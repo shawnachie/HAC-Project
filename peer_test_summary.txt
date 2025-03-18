@@ -1,0 +1,28 @@
+===== PEER DEAD/ALIVE TEST SUMMARY =====
+
+The test executed the following sequence:
+1. Started 3 peers on ports 5000, 5001, 5002
+2. Killed peer on port 5001 (ID 10002)
+3. Waited for other peers to detect it as dead
+4. Restarted peer on port 5001
+5. Waited for other peers to detect it as back online
+
+TEST RESULTS
+-----------
+
+Log files have been generated for each peer:
+- peer_5000.log - For peer ID 10000
+- peer_5001.log - For peer ID 10002
+- peer_5002.log - For peer ID 10004
+
+Each log file should contain isolated entries for that peer.
+To verify the test was successful, check:
+
+1. In peer_5000.log and peer_5002.log:
+   - Entries showing 'Peer 10002 is dead' after peer 5001 was killed
+   - Entries showing 'Peer 10002 is back online' after peer 5001 was restarted
+
+2. After restart, all logs should show stable peer connections
+
+Since we're now using java.util.logging with separate log files,
+the output should be clean and easy to analyze.
