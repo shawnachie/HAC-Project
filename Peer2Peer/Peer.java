@@ -2,8 +2,6 @@ package Peer2Peer;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -129,14 +127,11 @@ public class Peer {
     }
 
     public static void main(String[] args) {
-        if (args.length < 2) {
-            System.out.println("Usage: java Peer <port> <file1> <file2> ...");
-            return;
-        }
+
 
         try {
             int port = Integer.parseInt(args[0]);
-            List<String> fileListing = Arrays.asList(Arrays.copyOfRange(args, 1, args.length));
+            List<String> fileListing = new ArrayList<>();
 
             Peer network = new Peer(port, fileListing);
             network.loadConfig();
@@ -148,7 +143,7 @@ public class Peer {
         }
     }
 
-    private void loadConfig() throws IOException {
+    /*private void loadConfig() throws IOException {
         try (BufferedReader reader = new BufferedReader(new FileReader(CONFIG_FILE))) {
             String line;
             while ((line = reader.readLine()) != null) {
@@ -158,6 +153,60 @@ public class Peer {
                 peerIps.add(ip);
                 peerPorts.add(port);
                 logger.info("Added peer: " + ip + ":" + port);
+            }
+        }
+    }*/
+
+    private void loadConfig() throws IOException {
+        String homeDirectory = null;
+        
+        try (BufferedReader reader = new BufferedReader(new FileReader(CONFIG_FILE))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                if (line.startsWith("directory=")) {
+                    
+                    homeDirectory = line.substring("directory=".length());
+                    logger.info("Home directory configured: " + homeDirectory);
+                } else if (line.contains(":")) {
+
+                    String[] parts = line.split(":");
+                    String ip = parts[0];
+                    int port = Integer.parseInt(parts[1]);
+                    peerIps.add(ip);
+                    peerPorts.add(port);
+                    logger.info("Added peer: " + ip + ":" + port);
+                }
+            }
+        }
+    
+        if (homeDirectory != null) {
+            loadFilesFromDirectory(homeDirectory);
+        } else {
+            logger.warning("No home directory specified in config file");
+        }
+    }
+
+    
+    private void loadFilesFromDirectory(String directory) {
+        File dir = new File(directory);
+        if (dir.exists() && dir.isDirectory()) {
+            File[] files = dir.listFiles();
+            if (files != null) {
+                fileListing.clear();
+                for (File file : files) {
+                    if (file.isFile()) {
+                        fileListing.add(file.getName());
+                        logger.fine("Added file to listing: " + file.getName());
+                    }
+                }
+                logger.info("Loaded " + fileListing.size() + " files from " + directory);
+            } else {
+                logger.warning("No files found in directory: " + directory);
+            }
+        } else {
+            logger.warning("Directory does not exist or is not accessible: " + directory);
+            if (dir.mkdirs()) {
+                logger.info("Created directory: " + directory);
             }
         }
     }
